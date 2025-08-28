@@ -43,7 +43,7 @@ After following the quickstart you'll have learned how to:
 ## Running the template
 
 ```bash
-git clone https://github.com/clerkinc/clerk-chrome-extension-quickstart
+git clone https://github.com/clerkinc/clerk-chrome-extension-quickstart.git
 ```
 
 To run the example locally, you need to:
