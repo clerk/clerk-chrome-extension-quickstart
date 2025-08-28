@@ -54,7 +54,7 @@ To run the example locally, you need to:
 
 3. Set the required Clerk environment variables as shown in [the example `.env.development` file](./.env.development.example).
 
-4. Create a [consistent CRX ID](https://clerk.com/docs/references/chrome-extension/configure-consistent-key) for your extension.
+4. Create a [consistent CRX ID](https://clerk.com/docs/references/chrome-extension/configure-consistent-crx-id) for your extension.
 
 5. Set the public key are shown in [the example `.env.chrome` file](./.env.chrome.example).
 
