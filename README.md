@@ -43,7 +43,7 @@ After following the quickstart you'll have learned how to:
 ## Running the template
 
 ```bash
-git clone https://github.com/clerkinc/clerk-chrome-extension-quickstart.git
+git clone https://github.com/clerk/clerk-chrome-extension-quickstart.git
 ```
 
 To run the example locally, you need to:
@@ -56,11 +56,11 @@ To run the example locally, you need to:
 
 4. Create a [consistent CRX ID](https://clerk.com/docs/references/chrome-extension/configure-consistent-crx-id) for your extension.
 
-5. Set the public key are shown in [the example `.env.chrome` file](./.env.chrome.example).
+5. Set the public key as shown in [the example `.env.chrome` file](./.env.chrome.example).
 
-5. `pnpm install` the required dependencies.
+6. `pnpm install` to install the required dependencies.
 
-6. `pnpm dev` to launch the development server.
+7. `pnpm dev` to launch the development server.
 
 ## Learn more
 
