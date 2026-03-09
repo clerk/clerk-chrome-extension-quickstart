@@ -1,6 +1,7 @@
 import {
   ClerkProvider,
   SignInButton,
+  SignUpButton,
   SignedIn,
   SignedOut,
   UserButton
@@ -28,6 +29,7 @@ function IndexPopup() {
         <header className="plasmo-w-full">
           <SignedOut>
             <SignInButton mode="modal" />
+            <SignUpButton mode="modal" />
           </SignedOut>
           <SignedIn>
             <UserButton />
