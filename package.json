@@ -1,41 +1,27 @@
 {
   "name": "clerk-chrome-extension-quickstart",
-  "displayName": "Clerk chrome extension quickstart",
-  "version": "0.0.1",
-  "description": "A basic implementation of Clerk with a Plasmo-based Chrome Extension.",
-  "author": "Clerk",
+  "description": "A basic implementation of Clerk with a WXT-based Chrome Extension.",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "plasmo dev",
-    "build": "plasmo build",
-    "package": "plasmo package"
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "compile": "tsc --noEmit",
+    "postinstall": "wxt prepare"
   },
   "dependencies": {
-    "@clerk/chrome-extension": "^2.5.21",
-    "plasmo": "^0.90.5",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "tailwindcss": "^3.4.17"
+    "@clerk/chrome-extension": "^3.1.99",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
-    "@types/chrome": "^0.0.258",
-    "@types/node": "^20.19.10",
-    "@types/react": "^19.1.10",
-    "@types/react-dom": "^19.1.7",
-    "postcss": "^8.5.6",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.2"
-  },
-  "manifest": {
-    "permissions": [
-      "cookies",
-      "storage"
-    ],
-    "host_permissions": [
-      "http://localhost/*",
-      "$CLERK_FRONTEND_API/*"
-    ],
-    "key": "$CRX_PUBLIC_KEY"
-  },
-  "packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800"
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@wxt-dev/module-react": "^1.1.5",
+    "typescript": "^5.9.3",
+    "web-ext": "^10.5.0",
+    "wxt": "^0.21.3"
+  }
 }

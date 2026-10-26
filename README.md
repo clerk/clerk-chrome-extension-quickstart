@@ -31,7 +31,7 @@ Clerk is a developer-first authentication and user management solution. It provi
 
 After following the quickstart you'll have learned how to:
 
-- Scaffold a new application using the Plasmo framework
+- Scaffold a new application using the [WXT](https://wxt.dev) framework
 - Install `@clerk/chrome-extension`
 - Set your environment variables
 - Add `<ClerkProvider>` to your application
@@ -60,7 +60,7 @@ To run the example locally, you need to:
 
 6. `pnpm install` to install the required dependencies.
 
-7. `pnpm dev` to launch the development server.
+7. `pnpm dev` to launch the development server. WXT opens Chrome with the extension installed.
 
 ## Learn more
 
