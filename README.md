@@ -62,6 +62,8 @@ To run the example locally, you need to:
 
 7. `pnpm dev` to launch the development server. WXT opens Chrome with the extension installed.
 
+To build the extension for production, create a `.env.production` file with the same variables, using your production instance's values. `pnpm build` and `pnpm zip` read `.env.production`, not `.env.development`, and stop with an error if the values are missing.
+
 ## Learn more
 
 To learn more about Clerk and Chrome Extensions, check out the following resources:

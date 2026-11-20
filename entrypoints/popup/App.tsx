@@ -11,7 +11,7 @@ const POPUP_URL = browser.runtime.getURL('/popup.html');
 
 if (!PUBLISHABLE_KEY) {
   throw new Error(
-    'Please add the WXT_CLERK_PUBLISHABLE_KEY to the .env.development file',
+    `Add WXT_CLERK_PUBLISHABLE_KEY to your .env.${import.meta.env.MODE} file`,
   );
 }
 
@@ -22,6 +22,14 @@ function App() {
       afterSignOutUrl={POPUP_URL}
       signInFallbackRedirectUrl={POPUP_URL}
       signUpFallbackRedirectUrl={POPUP_URL}
+      // OAuth and SAML can't complete in a popup, so hide the social buttons.
+      // To support them, use a sync host: https://clerk.com/docs/guides/sessions/sync-host
+      appearance={{
+        elements: {
+          socialButtonsRoot: { display: 'none' },
+          dividerRow: { display: 'none' },
+        },
+      }}
     >
       <header>
         <Show when="signed-out">
