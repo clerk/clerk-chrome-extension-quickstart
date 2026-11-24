@@ -31,7 +31,7 @@ Clerk is a developer-first authentication and user management solution. It provi
 
 After following the quickstart you'll have learned how to:
 
-- Scaffold a new application using the Plasmo framework
+- Scaffold a new application using the [WXT](https://wxt.dev) framework
 - Install `@clerk/chrome-extension`
 - Set your environment variables
 - Add `<ClerkProvider>` to your application
@@ -52,15 +52,19 @@ To run the example locally, you need to:
 
 2. Go to the [Clerk dashboard](https://dashboard.clerk.com?utm_source=readme&utm_medium=owned&utm_campaign=chrome-extension&utm_content=10-24-2023&utm_term=clerk-chrome-extension-quickstart) and create an application.
 
-3. Set the required Clerk environment variables as shown in [the example `.env.development` file](./.env.development.example).
+3. In the Clerk Dashboard, navigate to your development instance's [**Protections**](https://dashboard.clerk.com/~/protect/protections) page and turn off **Challenge suspicious sign-ups** and **Require Device Intelligence checks**. Development instances treat the extension as a browser, and it can't run these checks, so sign-ups fail while they're on. Leave them on for production. See [Turn off bot protection](https://clerk.com/docs/chrome-extension/getting-started/quickstart#turn-off-bot-protection).
 
-4. Create a [consistent CRX ID](https://clerk.com/docs/references/chrome-extension/configure-consistent-crx-id) for your extension.
+4. Set the required Clerk environment variables as shown in [the example `.env.development` file](./.env.development.example).
 
-5. Set the public key as shown in [the example `.env.chrome` file](./.env.chrome.example).
+5. Create a [consistent CRX ID](https://clerk.com/docs/references/chrome-extension/configure-consistent-crx-id) for your extension.
 
-6. `pnpm install` to install the required dependencies.
+6. Set the public key as shown in [the example `.env.chrome` file](./.env.chrome.example).
 
-7. `pnpm dev` to launch the development server.
+7. `pnpm install` to install the required dependencies.
+
+8. `pnpm dev` to launch the development server. WXT opens Chrome with the extension installed.
+
+To build the extension for production, create a `.env.production` file with the same variables, using your production instance's values. `pnpm build` and `pnpm zip` read `.env.production`, not `.env.development`, and stop with an error if the values are missing.
 
 ## Learn more
 
